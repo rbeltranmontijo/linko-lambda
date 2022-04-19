@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "b9c81502-b847-4ae2-9b27-ef3a34259efc",
+		"name": "Linko-prueba",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "healt",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://duxi6x9krb.execute-api.us-west-2.amazonaws.com/health",
+					"protocol": "https",
+					"host": [
+						"duxi6x9krb",
+						"execute-api",
+						"us-west-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CrearUsuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\": \"Robin12345678901234567890123456789012345\",\n    \"apellidoPaterno\": \"Beltran\",\n    \"apellidoMaterno\": \"Montijo\",\n    \"numeroTelefono\": 553975096,\n    \"email\": \"rbeltranmontijo@gmail.com\",\n    \"nombreUsuario\": \"rbeltranmontijo\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://duxi6x9krb.execute-api.us-west-2.amazonaws.com/api/v1/auth/signup",
+					"protocol": "https",
+					"host": [
+						"duxi6x9krb",
+						"execute-api",
+						"us-west-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"numeroTelefono\": 5539750959,\n    \"nombreUsuario\": \"rbeltranmontijo\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://duxi6x9krb.execute-api.us-west-2.amazonaws.com/api/v1/auth/signin",
+					"protocol": "https",
+					"host": [
+						"duxi6x9krb",
+						"execute-api",
+						"us-west-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Todos los Usuarios",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNWUwNTdjYjIyZmRkZjVhZjhjZDhmYyIsImlhdCI6MTY1MDMyOTA5NiwiZXhwIjoxNjUwNDE1NDk2fQ.oRhJhRRphNxGQi9V9Ntw2epGO1SPcqaDMSquE34nNnk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://duxi6x9krb.execute-api.us-west-2.amazonaws.com/api/v1/users",
+					"protocol": "https",
+					"host": [
+						"duxi6x9krb",
+						"execute-api",
+						"us-west-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
